@@ -1,0 +1,719 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="description"
+content="Kinesiology Ecosystems Consulting supports athletics, recreation, community physical activity access, evaluation, and strategic program development.">
+
+<title>Consulting | Kinesiology Ecosystems</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #11231c;
+  --forest: #172e23;
+  --green: #315a46;
+  --lime: #ddfa8a;
+  --paper: #f6f8f3;
+  --muted: #62746a;
+  --line: #dce4db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 'DM Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: Manrope, sans-serif;
+  letter-spacing: -.055em;
+  line-height: 1.12;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 7vw, 6.8rem);
+}
+
+h2 {
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+}
+
+h3 {
+  font-size: 1.28rem;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+.wrap {
+  width: min(1150px, calc(100% - 40px));
+  margin: auto;
+}
+
+.eyebrow {
+  font-size: .72rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #79b595;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 13px 23px;
+  font-weight: 800;
+  font-size: .86rem;
+  background: var(--lime);
+  color: #10251c;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #ffffff80;
+  color: white;
+}
+
+/* NAVIGATION */
+
+.nav {
+  background: #101d17;
+  color: white;
+}
+
+.nav-inner {
+  min-height: 84px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: .85rem;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.navlinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.navlinks a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+
+.hero {
+  background: radial-gradient(
+    circle at 82% 28%,
+    #356c4d,
+    #172d22 50%,
+    #101c17
+  );
+  color: white;
+  padding: 105px 0 118px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid #ffffff20;
+  right: -150px;
+  top: 5px;
+  box-shadow:
+    0 0 0 75px #ffffff09,
+    0 0 0 150px #ffffff05;
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  max-width: 950px;
+  margin: 25px 0;
+}
+
+.hero h1 span {
+  color: var(--lime);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #d3e2d7;
+  max-width: 650px;
+  margin-bottom: 28px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 100px 0;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  margin: 15px 0;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+/* SERVICE CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 36px;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 22px;
+  min-height: 275px;
+}
+
+.num {
+  font-size: .78rem;
+  letter-spacing: .15em;
+  font-weight: 800;
+  color: #488569;
+  display: block;
+  margin-bottom: 45px;
+}
+
+.card h3 {
+  font-size: 1.55rem;
+  margin-bottom: 14px;
+}
+
+.card p {
+  color: #5f7067;
+}
+
+/* OUR APPROACH */
+
+.approach {
+  background: #e9f0e7;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.split h2 {
+  margin: 15px 0;
+}
+
+.approach-list {
+  margin: 0;
+  padding-left: 22px;
+  color: #475d50;
+}
+
+.approach-list li {
+  margin-bottom: 18px;
+}
+
+/* EXPERIENCE */
+
+.cred {
+  background: white;
+}
+
+.credential {
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.credential strong {
+  display: block;
+  font-size: 1.07rem;
+}
+
+.credential p {
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+/* CONTACT */
+
+.cta {
+  background: #14291e;
+  text-align: center;
+  color: white;
+}
+
+.cta h2 {
+  max-width: 750px;
+  margin: 16px auto 22px;
+}
+
+.cta p {
+  max-width: 650px;
+  margin: 0 auto 26px;
+  color: #cad8cd;
+}
+
+.contact-note {
+  font-size: .78rem !important;
+  color: #aabdae !important;
+  margin-top: 15px !important;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #0b1912;
+  color: #a8c2b1;
+  padding: 30px 0;
+  font-size: .82rem;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer b {
+  color: white;
+}
+
+/* MOBILE */
+
+@media(max-width: 760px) {
+  .nav-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px 0;
+  }
+
+  .navlinks {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 75px 0;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .cards,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .split {
+    gap: 25px;
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  .num {
+    margin-bottom: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="nav">
+  <div class="wrap nav-inner">
+
+    <a class="brand" href="./index.html">
+      <span class="mark">KE</span>
+      <span>
+        KINESIOLOGY<br>
+        ECOSYSTEMS
+      </span>
+    </a>
+
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="wrap">
+
+    <span class="eyebrow">
+      Kinesiology Ecosystems / Consulting
+    </span>
+
+    <h1>
+      Stronger programs.<br>
+      <span>Greater impact.</span>
+    </h1>
+
+    <p>
+      Practical, evidence-informed consulting for
+      athletics, recreation, and community physical
+      activity. We help organizations assess needs,
+      strengthen operations, and design opportunities
+      for more people to participate and thrive.
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="#services">
+        Explore services ↗
+      </a>
+
+      <a class="btn secondary" href="#contact">
+        Discuss a project
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <span class="eyebrow" style="color:var(--green)">
+        Our services
+      </span>
+
+      <h2>From challenge to action.</h2>
+
+      <p>
+        Engagements are tailored to your organization,
+        population, resources, and goals. The following
+        represent our initial consulting focus areas.
+      </p>
+
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <span class="num">
+          01 / ATHLETICS + RECREATION
+        </span>
+
+        <h3>Athletics &amp; Recreation Operations</h3>
+
+        <p>
+          Program reviews, scheduling and staffing
+          workflows, participation strategies,
+          coach support systems, and sustainable
+          growth planning.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="num">
+          02 / COMMUNITY ACCESS
+        </span>
+
+        <h3>
+          Physical Activity Access &amp; Program Design
+        </h3>
+
+        <p>
+          Community needs assessments, barrier and
+          facilitator analysis, inclusive program
+          planning, and translating research insights
+          into actionable recommendations.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="num">
+          03 / EVALUATION
+        </span>
+
+        <h3>Program Evaluation &amp; Analytics</h3>
+
+        <p>
+          Baseline measures, surveys, performance
+          indicators, accessible dashboards,
+          outcomes reporting, and practical
+          improvement cycles.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="num">
+          04 / STRATEGY
+        </span>
+
+        <h3>
+          Organizational &amp; Partnership Development
+        </h3>
+
+        <p>
+          Program launch planning, cross-sector
+          partnerships, strategic priorities,
+          staff development, and implementation
+          roadmaps.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH -->
+
+<section class="section approach" id="approach">
+  <div class="wrap split">
+
+    <div>
+      <span class="eyebrow" style="color:var(--green)">
+        How we work
+      </span>
+
+      <h2>
+        Listen first.<br>
+        Build with purpose.
+      </h2>
+
+      <p>
+        There is no one-size-fits-all playbook for
+        community sports and recreation. We start
+        with the people, places, and practical
+        constraints that shape outcomes.
+      </p>
+    </div>
+
+    <ol class="approach-list">
+      <li>
+        <strong>Discover.</strong>
+        Clarify your goals and hear from stakeholders.
+      </li>
+
+      <li>
+        <strong>Assess.</strong>
+        Review operations, participation, access,
+        and available data.
+      </li>
+
+      <li>
+        <strong>Design.</strong>
+        Develop focused, feasible options with
+        measurable objectives.
+      </li>
+
+      <li>
+        <strong>Support.</strong>
+        Provide a roadmap, tools, and follow-up
+        evaluation options.
+      </li>
+    </ol>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL EXPERIENCE -->
+
+<section class="section cred" id="experience">
+  <div class="wrap split">
+
+    <div>
+      <span class="eyebrow" style="color:var(--green)">
+        Relevant background
+      </span>
+
+      <h2>
+        Built on real program experience.
+      </h2>
+
+      <p>
+        Our approach is informed by experience
+        in education, coaching, athletics
+        administration, and applied kinesiology
+        — not just theory.
+      </p>
+    </div>
+
+    <div>
+
+      <div class="credential">
+        <strong>Athletics leadership</strong>
+
+        <p>
+          Experience directing school sports programs,
+          coordinating coaches, and strengthening
+          participation and operations.
+        </p>
+      </div>
+
+      <div class="credential">
+        <strong>Kinesiology &amp; education</strong>
+
+        <p>
+          Graduate-level training in kinesiology
+          and educational technology, with
+          doctoral research focused on
+          physical activity access.
+        </p>
+      </div>
+
+      <div class="credential">
+        <strong>Technology &amp; analysis</strong>
+
+        <p>
+          Experience with data-informed planning,
+          program coordination, digital tools,
+          and business analytics study.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section cta" id="contact">
+  <div class="wrap">
+
+    <span class="eyebrow">
+      Start a conversation
+    </span>
+
+    <h2>
+      What could your program become?
+    </h2>
+
+    <p>
+      Have a challenge in athletics, recreation,
+      physical activity access, or program evaluation?
+      Let's discuss what a targeted consulting
+      project could look like.
+    </p>
+
+    <a
+      class="btn"
+      href="mailto:coachjaymot@gmail.com?subject=Kinesiology%20Ecosystems%20Consulting%20Inquiry">
+      Inquire about consulting ↗
+    </a>
+
+    <p class="contact-note">
+      Inquiries welcome. Scope, availability, and
+      proposals are determined individually.
+    </p>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="wrap foot">
+
+    <div>
+      <b>KINESIOLOGY ECOSYSTEMS</b> · Consulting
+    </div>
+
+    <a href="./index.html">
+      Return to company homepage ↗
+    </a>
+
+    <div>
+      © <span id="year"></span>
+      Kinesiology Ecosystems
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
